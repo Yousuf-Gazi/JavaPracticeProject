@@ -1,4 +1,4 @@
-package MoshMytube;
+package MoshMytubeStart;
 
 public class VideoEncoder {
     public void encode(Video video) {

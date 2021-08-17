@@ -1,4 +1,4 @@
-package MoshMytube;
+package MoshMytubeEnd;
 
 public class EmailService {
     public void sendEmail(User user) {

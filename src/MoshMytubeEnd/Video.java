@@ -1,4 +1,4 @@
-package MoshMytube;
+package MoshMytubeEnd;
 
 public class Video {
     private String fileName;

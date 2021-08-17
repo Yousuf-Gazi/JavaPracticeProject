@@ -1,4 +1,4 @@
-package MoshMytube;
+package MoshMytubeStart;
 
 public class User {
     private String email;
