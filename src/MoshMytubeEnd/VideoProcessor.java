@@ -1,14 +1,19 @@
 package MoshMytubeEnd;
 
 public class VideoProcessor {
+    private VideoEncoder encoder;
+    private VideoDatabase database;
+    private NotificationService notificationService;
+
+    public VideoProcessor(VideoEncoder encoder, VideoDatabase database, NotificationService notificationService) {
+        this.encoder = encoder;
+        this.database = database;
+        this.notificationService = notificationService;
+    }
+
     public void process(Video video) {
-        VideoEncoder encoder = new VideoEncoder();
         encoder.encode(video);
-
-        VideoDatabase database = new VideoDatabase();
         database.store(video);
-
-        EmailService emailService = new EmailService();
-        emailService.sendEmail(video.getUser());
+        notificationService.notify(video.getUser());
     }
 }

@@ -8,7 +8,11 @@ public class Main {
         video.setTitle("Jennifer's birthday");
         video.setUser(new User("john@domain.com"));
 
-        VideoProcessor processor = new VideoProcessor();
+        VideoProcessor processor = new VideoProcessor(
+                new XVideoEncoder(),
+                new SqlVideoDatabase(),
+                new EmailService()
+                );
         processor.process(video);
     }
 
